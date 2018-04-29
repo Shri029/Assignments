@@ -5,7 +5,7 @@
 /*
 
 Program              : Implementation for Visiting current directory, it's subdirectories and printing file's information
-Author               : © Sakeena Shahid-29, Shreshth Saxena -38
+Author               : © Shivani Tiwary-36
 Created on           : March 22, 2018 09:20 IST
 Language             : C
 Library Functions    : fopen(..),fgets(..),memset(..),fclose(.) 
