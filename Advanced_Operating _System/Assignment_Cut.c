@@ -29,7 +29,9 @@ void Display(char str[MAXCHAR]);
 
 Method Name            : Read_Dir
 Purpose                : To fetch the information of directory, it's subdirectory and files
-Summary                : Lists the information of current directory and it's subdirectory recursively using unix commands, redirects this information to a file. Reads the file line by line and passes the string to display procedure if it is a file(-), directory(d), or a linked directory(l).
+Summary                : Lists the information of current directory and it's subdirectory recursively using unix commands, 
+			 redirects this information to a file. Reads the file line by line and passes the string to display procedure 
+			 if it is a file(-), directory(d), or a linked directory(l).
 Parameters             : None
 Returns                : 
                              Zero		   - if function executes successfully.
@@ -83,7 +85,7 @@ int Read_Dir(){
 	}
        
     
-	fclose(fp);                            	           // Closing the file pointed by fp.
+	fclose(fp);                            	           		 // Closing the file pointed by fp.
 	return 0;
     
 }
@@ -92,7 +94,11 @@ int Read_Dir(){
 
 Method Name             : Display
 Purpose                 : To display the information of directory,files and linked directory
-Summary                 : Duplicate spaces of the listed attribute(str) is removed because space is the delimiter of 'cut' command. String with removed space is being overwritten at the start of the file(info.txt) as file discriptor is opened in 'w' mode. Further, the first character of the string is checked for a directory,a file or a linked directory. Unix command 'cut' is used for cutting sections from the file(info.txt) and displaying File name, Permissions,Link/Directory count, User, Group, File-size and Time to standard output.
+Summary                 : Duplicate spaces of the listed attribute(str) is removed because space is the delimiter of 'cut' command. 
+			  String with removed space is being overwritten at the start of the file(info.txt) as file discriptor is 
+			  opened in 'w' mode. Further, the first character of the string is checked for a directory,a file or a linked 
+			  directory. Unix command 'cut' is used for cutting sections from the file(info.txt) and displaying File name, 
+			  Permissions,Link/Directory count, User, Group, File-size and Time to standard output.
 Parameters              : Character Array, str: each record carries file/directory information
 Returns                 : None
    
@@ -102,7 +108,7 @@ Returns                 : None
 void Display(char str[MAXCHAR]){
 
 	char ch,str1[MAXCHAR];					                            // Holds Character 
-	int i=0,j;				                            // Controls Loop
+	int i=0,j;				                    			   // Control Loops
 	FILE *fptr,*fptr1;
 
 /* Removing duplicate spaces. */
@@ -120,9 +126,9 @@ void Display(char str[MAXCHAR]){
                 }  		
          }  
 
-	fptr = fopen("info.txt", "w+");
+	fptr = fopen("info.txt", "w+");		 						//Opening file in write mode. 
 
-/* Writing Contents of the string to file. */ 
+/* Writing Contents of the string to file pointed by file pointer fptr. */ 
 
 	if ( fptr ){
 
@@ -133,7 +139,7 @@ void Display(char str[MAXCHAR]){
 	else
 	      printf("Failed to open the file\n");
 
-/* Checking for the file(-), Directory(d) or a linked directory(l) and further displaying the content */
+/* Checking for the file(-), directory(d) or a linked directory(l) and further displaying the content */
 
         if(str[0]=='-' || str[0]=='d' || str[0]=='l'){             
 
