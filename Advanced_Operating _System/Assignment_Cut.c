@@ -152,7 +152,8 @@ void Display(char str[MAXCHAR]){
 	else if(str[0]=='d')
     		printf("\n\n\n***************DIRECTORY***************\n");	
 	
-    
+/* Cut command is reading the file,usind space as a delimiter, cutting the section and displaying information on standard output. */
+		
 	printf("\n\nName");
 	system("cut -d' ' -f9 info.txt");
 	
@@ -195,13 +196,9 @@ Returns     	: 		Integer
 
 */
 
-int main(int argc, char *argv[1]) {				// Main Function 
+int main(int argc, char *argv[1]) {	
    
     Read_Dir();
     return 0;
     
 }
-
-
-
-
