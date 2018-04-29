@@ -29,7 +29,7 @@ void Display(char str[MAXCHAR]);
 
 Method Name            : Read_Dir
 Purpose                : To fetch the information of directory, it's subdirectory and files
-Summary                : Lists the information of current directory and it's subdirectory recursively using unix     commands, redirects this information to a file. Reads the file line by line and passes the string to display procedure if it is a file(-), directory(d), or a linked directory(l).
+Summary                : Lists the information of current directory and it's subdirectory recursively using unix commands, redirects this information to a file. Reads the file line by line and passes the string to display procedure if it is a file(-), directory(d), or a linked directory(l).
 Parameters             : None
 Returns                : 
                              Zero		   - if function executes successfully.
