@@ -1,0 +1,4 @@
+Timestamp,Last,LastSize,TotalVolume,Bid,Ask,TickId,BasisForLast,TradeMarketCenter,TradeConditions
+13:37:27.483,0.54,1,1,0.1,1,3058525,C,13,45
+14:37:27.483,0.54,1,2,0.1,1,3058525,O,13,45
+15:37:27.483,0.8,29,31,0.4,0.85,77148452,C,17,27
